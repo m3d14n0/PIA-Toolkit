@@ -8,10 +8,12 @@ WebApp for Django Project
 Django filetransfers needs to be installed from the wkornewald-django-filetransfers-b2df8b4fbf2e included in the root folder of the project.
 This package comes from * [Django-filetransfers](https://bitbucket.org/wkornewald/django-filetransfers)
 
-You can use [pip](https://pypi.org/project/pip/) for the installation of all the packages and dependences included on the requirements.txt file
+You can use [pip](https://pypi.org/project/pip/) for the installation of all the packages and dependences included on the ```requirements.txt``` file
   
 
-```pip install -r requirements.txt```
+```
+pip install -r requirements.txt
+```
 
 
 ## Getting Started
