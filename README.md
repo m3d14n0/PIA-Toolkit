@@ -4,30 +4,11 @@ WebApp for Django Project
 
 ### Prerequisites
 
-boto==2.49.0
-Django==2.0.7
-django-admin-honeypot==1.1.0
-django-bootstrap4==0.0.6
-django-extras==0.3
-django-material==1.2.5
-django-ses==0.8.6
-djangorestframework==3.8.2
-future==0.16.0
-html5lib==1.0.1
-httplib2==0.11.3
-Pillow==5.2.0
-PyPDF2==1.26.0
-pytz==2018.5
-reportlab==3.5.5
-six==1.11.0
-webencodings==0.5.1
-xhtml2pdf==0.2.2
-XlsxWriter==1.0.5
 
 Django filetransfers needs to be installed from the wkornewald-django-filetransfers-b2df8b4fbf2e included in the root folder of the project.
 This package comes from * [Django-filetransfers](https://bitbucket.org/wkornewald/django-filetransfers)
 
-Use pip for the installation of all the packages and dependences included on the requirements.txt file
+You can use [pip](https://pypi.org/project/pip/) for the installation of all the packages and dependences included on the requirements.txt file
   pip install -r requirements.txt
 
 
@@ -84,8 +65,7 @@ Add additional notes about how to deploy this on a live system
 ## Built With
 
 * [Django-filetransfers](https://bitbucket.org/wkornewald/django-filetransfers)
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+
 
 ## Contributing
 
