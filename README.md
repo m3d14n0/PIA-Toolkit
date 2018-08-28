@@ -9,7 +9,7 @@ Django filetransfers needs to be installed from the wkornewald-django-filetransf
 This package comes from * [Django-filetransfers](https://bitbucket.org/wkornewald/django-filetransfers)
 
 You can use [pip](https://pypi.org/project/pip/) for the installation of all the packages and dependences included on the requirements.txt file
-  pip install -r requirements.txt
+  ```pip install -r requirements.txt```
 
 
 ## Getting Started
