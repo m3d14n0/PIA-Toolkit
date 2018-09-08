@@ -1,6 +1,12 @@
-# PIA Toolkit
+# PIA Toolkit Abstract
 
-WebApp for Django Project 
+The new General Regulation of Data Protection Directive (GDPR) encourages the realization of Privacy Impact Assessments (PIA) prior to the processing of personal data.  This type of study aims to minimize the impact that the materialization of a threat would have by focusing on the domain of Privacy. 
+The proposal of this project presents a methodology that relates the impact of privacy threats in the security domains of Confidentiality, Integrity, Availability and Traceability, providing a unified analysis in the risk management process implemented.  
+In order to respond to this requirement, the web application "PIA Toolkit" was developed using the Django web development framework. In addition, the application has been deployed on the technological infrastructure necessary to offer the service through the Internet, implementing certain measures that provide additional security protections. The source code has been released in a public repository with the expectation that the developer community can contribute to its improvement and implementation of new functionality.  
+The results obtained from this project provide the industry with an analysis and integration methodology that has not been proposed until now. It is expected to serve as support and motivation for the execution of this type of study, which, through resulting improvements in adapting to user needs over time, will actively contribute to promoting privacy in the design stage phases of software development, and its consequent social benefit in terms of data protection.
+
+Keywords: GDPR, PIA, Data Protection, Django
+ 
 
 ### Prerequisites
 
@@ -9,6 +15,7 @@ Django2.0 runs on Python 3.6, I suggest the use of virtualenv to avoid problems 
 ```
 pip install virtualenv
 ```
+
 And then ```create``` and ```activate``` your virtual environment to install all the dependencies in it.
 
 If it's the first time you've heard about virtualenv visit  [virtualenv documentation](https://virtualenv.pypa.io/en/stable/installation/)
@@ -35,14 +42,6 @@ Once installed all the dependencies navigate to the root folder of the project, 
 python manage.py migrate
 ```
 
-and run the Django Application with:
-
-```
-python manage.py runserver
-```
-
-And the PIA Toolkit App will be running in the specified port of your local host.
-
 You may want to add a super user to have acces to the admin panel,
 
 ```
@@ -50,6 +49,14 @@ python manage.py createsuperuser
 ```
 
 Bear in mind that the project is using django-admin-honeypot, so the real admin panel by default will be on ```/secret``` instead.
+
+And then run the Django Application with:
+
+```
+python manage.py runserver
+```
+
+Now PIA Toolkit will be running in the specified port of your local host.
 
 ## DB structure
 
