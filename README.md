@@ -4,93 +4,60 @@ WebApp for Django Project
 
 ### Prerequisites
 
+Runs on Python 3.6, I suggest the use of virtualenv to run the app. The approach would be:
+
+```
+pip install virtualenv
+```
+And then ```create``` and ```activate``` your virtual environment to install all the dependencies in it.
+
+If it's the first time you've heard about virtualenv visit * [virtualenv documentation](https://virtualenv.pypa.io/en/stable/installation/)
 
 Django filetransfers needs to be installed from the wkornewald-django-filetransfers-b2df8b4fbf2e included in the root folder of the project.
-This package comes from * [Django-filetransfers](https://bitbucket.org/wkornewald/django-filetransfers)
+This package comes from * [Django-filetransfers](https://bitbucket.org/wkornewald/django-filetransfers
+Then go into the downloaded folder and install with
 
-You can use [pip](https://pypi.org/project/pip/) for the installation of all the packages and dependences included on the ```requirements.txt``` file
+```
+python setup.py install
+```
+
+You can use [pip](https://pypi.org/project/pip/) for the installation of the rest of the packages and dependences included on the ```requirements.txt``` file
   
-
 ```
 pip install -r requirements.txt
 ```
 
+### Running the webApp
 
-## Getting Started
-
-
-
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Once installed all the dependencies go to the root folder of the project and run the Django Application with,
 
 ```
-Give the example
+python manage.py runserver
 ```
 
-And repeat
+And the PIA Toolkit App will be running in the specified port of your local host.
+
+You may want to add a super user to have acces to the admin panel,
 
 ```
-until finished
+python manage.py createsuperuser
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Bear in mind that the project is using django-admin-honeypot, so the real admin panel by default will be on ```/secret``` instead.
 
-## Running the tests
+## DB structure
 
-Explain how to run the automated tests for this system
+![alt text](https://raw.githubusercontent.com/m3d14n0/PIA-Toolkit/edit/master/README.md/DB.png)
 
-### Break down into end to end tests
+## Deploying
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Django-filetransfers](https://bitbucket.org/wkornewald/django-filetransfers)
-
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+The live version of this project was deployed using ** [AWS elasticbeanstalk](https://aws.amazon.com/es/elasticbeanstalk/) that is why dependencies as boto3 or django-ses were used for. Same with AWS-related environment variables as ```RDS_DB_NAME ```.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **m3d14n0** - *Initial work* - [PurpleBooth](https://github.com/m3d14n0)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
