@@ -29,7 +29,13 @@ pip install -r requirements.txt
 
 ### Running the webApp
 
-Once installed all the dependencies go to the root folder of the project and run the Django Application with:
+Once installed all the dependencies navigate to the root folder of the project, apply the migrations to generate the local database:
+
+```
+python manage.py migrate
+```
+
+and run the Django Application with:
 
 ```
 python manage.py runserver
