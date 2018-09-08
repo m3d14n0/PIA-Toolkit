@@ -60,7 +60,7 @@ Now PIA Toolkit will be running in the specified port of your local host.
 
 ## DB structure
 
-![alt text](https://raw.githubusercontent.com/m3d14n0/PIA-Toolkit/edit/master/README.md/DB.png)
+![alt text](https://raw.githubusercontent.com/m3d14n0/PIA-Toolkit/edit/master/DB.png)
 
 ## Deploying
 
