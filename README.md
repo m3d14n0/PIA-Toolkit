@@ -4,7 +4,7 @@ WebApp for Django Project
 
 ### Prerequisites
 
-Runs on Python 3.6, I suggest the use of virtualenv to run the app. The approach would be:
+Django2.0 runs on Python 3.6, I suggest the use of virtualenv to avoid problems with the dependencies while deploying the app in your local host. The approach would be:
 
 ```
 pip install virtualenv
@@ -55,7 +55,7 @@ The live version of this project was deployed using ** [AWS elasticbeanstalk](ht
 
 ## Authors
 
-* **m3d14n0** - *Initial work* - [PurpleBooth](https://github.com/m3d14n0)
+**m3d14n0** - [GitHub account](https://github.com/m3d14n0)
 
 ## License
 
