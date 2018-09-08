@@ -11,17 +11,17 @@ pip install virtualenv
 ```
 And then ```create``` and ```activate``` your virtual environment to install all the dependencies in it.
 
-If it's the first time you've heard about virtualenv visit * [virtualenv documentation](https://virtualenv.pypa.io/en/stable/installation/)
+If it's the first time you've heard about virtualenv visit  [virtualenv documentation](https://virtualenv.pypa.io/en/stable/installation/)
 
-Django filetransfers needs to be installed from the wkornewald-django-filetransfers-b2df8b4fbf2e included in the root folder of the project.
+Django filetransfers needs to be installed from the ```wkornewald-django-filetransfers-b2df8b4fbf2e``` directory included in the root folder of the project.
 This package comes from * [Django-filetransfers](https://bitbucket.org/wkornewald/django-filetransfers
-Then go into the downloaded folder and install with
+Then go into the downloaded folder and install with:
 
 ```
 python setup.py install
 ```
 
-You can use [pip](https://pypi.org/project/pip/) for the installation of the rest of the packages and dependences included on the ```requirements.txt``` file
+You can use [pip](https://pypi.org/project/pip/) for the installation of the rest of the packages and dependences included on the ```requirements.txt``` file,
   
 ```
 pip install -r requirements.txt
@@ -29,7 +29,7 @@ pip install -r requirements.txt
 
 ### Running the webApp
 
-Once installed all the dependencies go to the root folder of the project and run the Django Application with,
+Once installed all the dependencies go to the root folder of the project and run the Django Application with:
 
 ```
 python manage.py runserver
