@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block head_title %} New PIA {{ block.super }} {% endblock head_title %}
+{% block content %}
+{% load material_form %}
+ <div class='row'>
+    <div class='col-md-4 col-6 mx-auto'>
+        <h4 class="form-signin-heading">Add Risk to your PIA</h4>
+        <p></p>
+    <form method="post" class="viewform bg-1">{% csrf_token %}
+        {{ form.as_p }}
+        <div class='col-md-10 col-6 mx-auto'>
+        <input type="submit" class="btn btn-block btn-info" value="Save">
+        </div>
+    </form>
+    </div>
+ </div>
+{% endblock %}

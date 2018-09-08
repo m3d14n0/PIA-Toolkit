@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block head_title %} Contact form {{ block.super }} {% endblock head_title %}
+
+{% block content %}
+
+        {% load i18n %}
+
+        {% include 'material/includes/material_css.html' %}
+        {% include 'material/includes/material_js.html' %}
+        {% load material_form %}
+        <form method="post" action="">
+                <h3 class="form-signin-heading">Contact us!</h3>
+                {% csrf_token %}
+
+                {% form form=form %} {% endform %}
+                <button type="submit" class="btn  btn-lg center-block" style="with:100%; text-align:center; margin:0 auto;">Submit</button>
+        </form>
+
+{% endblock %}
+
+

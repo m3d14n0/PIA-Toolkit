@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block head_title %} Login {{ block.super }} {% endblock head_title %}
+{% block content %}
+{% load bootstrap4 %}
+
+<div class='row'>
+    <div class='col-md-4 col-10 mx-auto'>
+        <h3 class="form-signin-heading">Please Log in</h3>
+        <p></p>
+        <!--
+        {% if form.errors %}
+            <div class="row centered">
+                    <div class="alert alert-danger" >
+                        {{ form.non_field_errors }}
+                    </div>
+            </div>
+        {% endif %}
+        -->
+        <form method='post' action=''>{% csrf_token %}{% bootstrap_form form %}
+
+            <span style='margin-bottom: 12px;'></span>
+            <button type="submit" class='btn btn-block btn-info'>Log In!</button>
+        </form>
+        <p></p>
+        <p>Demo account ---> User: guest@demo.com; Password: guest;</p>
+        <a href="{% url 'password_reset' %}">Cannot remember your password??</a>
+    </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block head_title %} No permissions {{ block.super }} {% endblock head_title %}
+{% block content %}
+
+<h3 class="margin">Oops, you have no permissions to render this page</h3>
+    <p></p>
+    <h4 class="margin">Why don't you try logging in?</h4>
+    <p></p>
+    <a href="{% url 'login' %}" class="btn btn-success btn-lg">Login</a>
+
+{% endblock content %}

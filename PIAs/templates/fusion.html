@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{pia}}</title>
+    <style type="text/css">
+             body {
+                 font-weight: 200;
+                 font-size: 14px;
+             }
+             .header {
+                 font-size: 20px;
+                 font-weight: 100;
+                 text-align: center;
+                 color: #031424;
+             }
+             .title {
+                 font-size: 22px;
+                 font-weight: 100;
+                /* text-align: right;*/
+                padding: 10px 20px 0px 20px;
+             }
+             .title span {
+                 color: #007cae;
+             }
+             .details {
+                 padding: 10px 20px 0px 20px;
+                 text-align: left !important;
+                 /*margin-left: 40%;*/
+             }
+             .hrItem {
+                 border: none;
+                 height: 1px;
+                 /* Set the hr color */
+                 color: #333; /* old IE */
+                 background-color: #fff; /* Modern Browsers */
+             }
+             table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+             }
+            th {
+                background-color: #30415d;
+                color: #fff;
+                border-color: #CF6766;
+                }
+            td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+                background-color: #fff
+             }
+            td, th {
+                border: 1px solid #CF6766;
+                text-align: left;
+                padding: 8px;
+             }
+
+            tr:nth-child(even) {
+                background-color: #007cae;
+             }
+         </style>
+    {% load static %}
+    <script type="text/javascript" src="{% static "fusioncharts/fusioncharts.js" %}"></script>
+    <script type="text/javascript" src="{% static "fusioncharts/themes/fusioncharts.theme.fint.js" %}"></script>
+  </head>
+  <body>
+    <div class='wrapper'>
+         <div class='header'>
+             <p class='title'>Privacy Risk Assessment</p>
+         </div>
+         <div>
+         <div class='details'>
+             PIA name:  {{ pia }}  <br/>
+             Date:    {{pia.last_edited}}
+             <hr class='hrItem' />
+         </div>
+         <div class='details'>
+             At this stage organisations should identify what action could be taken to address risks to privacy. It is important to remember that the aim of a PIA is not to completely eliminate the impact on privacy. The purpose of the PIA is to reduce the impact to an acceptable level while still allowing a useful project to be implemented. The process of identifying and implementing changes should be integrated with the wider project development process.
+             <p></p>
+             <table>
+                    <thead>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Risk</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-2">Likehood</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Confidentiality</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Integrity</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Availability</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Authenticity</th>
+                    </thead>
+                    <tbody>
+                    {% for r in riesgosinh %}
+                        <tr>
+                            <td class="text-center">{{ r.risk }}</td>
+                            <td class="text-center">{{ r.probability }}%</td>
+                            <td class="text-center">{{ r.confModImpact }}%</td>
+                            <td class="text-center">{{ r.integModImpact }}%</td>
+                            <td class="text-center">{{ r.disModImpact }}%</td>
+                            <td class="text-center">{{ r.noRepInhRisk }}%</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+         </div>
+     </div>
+        <p></p>
+    <div id="chart-1" align="center">{{ output|safe }}</div>
+  </body>
+</html>

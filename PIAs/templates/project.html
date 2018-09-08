@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block head_title %} Projects {{ block.super }} {% endblock head_title %}
+{% block content %}
+    <h1>{{ project.title }}</h1>
+        <div class='row'>
+            <div class="col-xs-2 col-md-1"></div>
+            <div class="col-xs-8 col-md-12 text-center py-5">
+                <div class="d-flex justify-content-between">
+                    <a href="{% url 'projects' %}" class="btn btn-primary left-block">Back</a>
+                    <a href="{{ project.get_absolute_url }}/new_pia" class="btn btn-primary right-block">New PIA</a>
+                </div>
+                    <table class="table table-striped table-borderless text-center">
+                        <thead>
+                            <th style="text-align: center;">Privacy Impact Assestment</th>
+                            <th style="text-align: center;" >Date Created</th>
+                            <th style="text-align: center;" >Last Edited</th>
+                        </thead>
+                        <tbody>
+                        {% for pia in pias %}
+                            <tr>
+                                <td class="text-center"><a href="{{ object.get_absolute_url }}/{{ pia.pk }}">{{ pia.name }}</a></td>
+                                <td class="text-center">{{ pia.date_created }}</td>
+                                <td class="text-center">{{ pia.last_edited }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+
+{% endblock %}

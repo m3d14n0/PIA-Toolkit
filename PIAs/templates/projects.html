@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block head_title %} Projects {{ block.super }} {% endblock head_title %}
+{% block content %}
+    <h1>Projects List</h1>
+    {% if project_list %}
+        <div class='row'>
+            <div class="col-xs-2 col-md-1"></div>
+            <div class="col-xs-8 col-md-12 text-center py-5">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Project</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-2">Organization</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">DateCreated</th>
+                    </thead>
+                    <tbody>
+                    {% for project in project_list %}
+                        <tr>
+                            <td class="text-center"><a href="{{ project.get_absolute_url }}">{{ project.title }}</a></td>
+                            <td class="text-center">{{ project.organization }}</td>
+                            <td class="text-center">{{ project.date_created }}</td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    {% else %}
+        <p>There are no projects in the library.</p>
+    {% endif %}
+    <a href="{% url 'newProject' %}" class="btn btn-primary center-block">New Project</a>
+{% endblock %}

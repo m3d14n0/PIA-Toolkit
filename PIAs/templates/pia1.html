@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block head_title %} Projects {{ block.super }} {% endblock head_title %}
+{% block content %}
+    <h1>{{ pia }}</h1>
+    <h1>{{ pia.riesgoinherente.risk }}</h1>
+    <h1>{{ pia.riesgoinherente.risk_count }}</h1>
+    <h3>Risks</h3>
+    <p></p>
+        <div class='row'>
+            <div class="col-xs-2 col-md-1"></div>
+            <div class="col-xs-8 col-md-12 text-center py-5">
+                <div class="d-flex justify-content-between">
+                    <a href="{{ pia.project.get_absolute_url }}" class="btn btn-primary left-block">Back to Project</a>
+                    <a href="{{ pia.get_absolute_url }}/add_risk" class="btn btn-primary right-block">Add Risk</a>
+                </div>
+            </div>
+            <div class="col-xs-8 col-md-12 text-center py-5">
+                <table class="table table-striped text-center">
+                    <thead>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Risk</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Thread</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-2">Likehood</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Confidentiality</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Integrity</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Availability</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Authenticity</th>
+                        <th style="text-align: center;" class="col-md-4 col-xs-3">Action</th>
+                    </thead>
+                    <tbody>
+                    {% for r in riesgosinh %}
+                        <tr>
+                            <td class="text-center">{{ r.risk }}</td>
+                            <td class="text-center">{{ r.risk.thread }}</td>
+                            <td class="text-center">{{ r.probability }}%</td>
+                            <td class="text-center">{{ r.confModImpact }}%</td>
+                            <td class="text-center">{{ r.integModImpact }}%</td>
+                            <td class="text-center">{{ r.disModImpact }}%</td>
+                            <td class="text-center">{{ r.noRepInhRisk }}%</td>
+                            <td class="text-center"><a href="{{ pia.get_absolute_url }}/{{ r.id }}"> EDIT</a>
+                                                    <a href="{{ pia.get_absolute_url }}/{{ r.id }}/delete"> REMOVE</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                    <a href="{{ pia.get_absolute_url }}/download_catalog" class="btn btn-lg center-block">Download Threats Catalog</a>
+                {% if riesgosinh %}
+                <a href="{{ pia.get_absolute_url }}/download" class="btn btn-lg center-block">Download TSV</a>
+                <a target="_blank" href="{{ pia.get_absolute_url }}/pdf2" class="btn btn-lg center-block">View Report</a>
+                {% endif %}
+            </div>
+        </div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block head_title %} Home {{ block.super }} {% endblock head_title %}
+{% block content %}
+{% load static %}
+
+        <div class="row" style="margin-top:60px;">
+                <div class='col-md-12 col-12 text-center' >
+                <h4 class="margin">Privacy Impact Assestment Toolkit User Guides</h4>
+        </div>
+        <div class="row" style="margin-top:80px;">
+                <div class='col-md-12 col-12 text-center' >
+                    <a href="{% url 'PILAR_es' %}">Integration with PILAR - Español</a>
+                    <p></p>
+                    <a href="{% url 'manual_es' %}">PIA Toolkit Manual - Español</a>
+                </div>
+        </div>
+
+{% endblock content %}

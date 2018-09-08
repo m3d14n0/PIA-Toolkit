@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<library-extension>
+  <threats>
+    <threat code="PIA">
+      PIA ToolKit risks
+    <threat code=".1" labels="discrimitation">
+      Discrimination of the subjects when providing the product or service based on their personal data
+      </threat>
+    <threat code=".2" labels="stigmatization">
+      Stigmatization or social signaling of the subject
+      </threat>
+    <threat code=".3" labels="transparency">
+      Use of the ideas or beliefs of the subject by third parties
+      </threat>
+    <threat code=".4" labels="purpose limitation">
+      Revelation of intimate aspects from the personality of the subject
+      </threat>
+    <threat code=".5" labels="data minimisation">
+      Impersonation of the subjects' identity
+      </threat>
+    <threat code=".6" labels="restrictions">
+      Restrictions on the free movement of the subject
+      </threat>
+    <threat code=".7" labels="geographic tracking">
+      Geographic tracking of the subject by third parties
+      </threat>
+    <threat code=".8" labels="questionable environments">
+      Exposure of sensitive data or data sufficiently complete to profile the individual in questionable security environments
+      </threat>
+    <threat code=".9" labels="compromised">
+      Technical systems with a high probability of being compromised
+      </threat>
+    <threat code=".10" labels="international">
+      Treatments carried out in countries with questionable legal security, independently of the legal guarantees to carry out international data transfers. In the latter case, it is necessary to foresee the authorities' ability to access data with or without judicial supervision
+      </threat>
+    <threat code=".11" labels="choices">
+      Interference in the choices you make in your private life
+    </threat>
+    <threat code=".12" labels="ideas">
+        Manipulation of the individual's ideas or behavior
+    </threat>
+    <threat code=".13" labels="decisions">
+        Making automatic decisions that affect your daily life
+    </threat>
+    <threat code=".14" labels="accumulation">
+        Accumulation of personal data that allows a profile of private and intimate aspects of the people in the hands of the entity
+    </threat>
+    <threat code=".15" labels="autonomy">
+        Loss of autonomy when making their own decisions
+    </threat>
+    <threat code=".16" labels="independence">
+      Loss of independence of the citizen when making future choices of products or services
+    </threat>
+    <threat code=".17" labels="bullying">
+      Bullying
+    </threat>
+    <threat code=".18" labels="criminal">
+      Criminal activities
+    </threat>
+    <threat code=".19" labels="third countries">
+      Mass access to data of subjects by authorities of third countries
+    </threat>
+    <threat code=".20" labels="monopoly">
+      When the service is offered in the form of monopoly, exclusivity or other circumstances that make the subject hostage to the conditions of service
+    </threat>
+    <threat code=".21" labels="consent">
+      Treatment of data without the consent of the original subjects
+    </threat>
+    <threat code=".22" labels="information">
+      Data processing without the correct information
+    </threat>
+    <threat code=".23" labels="mal-informed">
+      When the informed consent is informed but not in the correct way or without any information
+    </threat>
+    </threat>
+  </threats>
+</library-extension>

@@ -1,0 +1,23 @@
+{% load static %}
+<div class="navbar bg-indigo">
+        <a class="navbar-brand" style="font-family: Helvetica;" href="/"><img style="height: 55px;" src="{% static 'safewave.png' %}"SafeWave.es</a>
+        <a href="/" style="color:white;">Home</a>
+        {% if user.is_authenticated %}
+                <div class="dropdown show">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" style="color:#ffffff">Account
+                     </a>
+                        <ul class="dropdown-menu" style="right: 0; left: auto;">
+                            <a class="dropdown-item" href="{% url 'password_change' %}" style="color:white;">Change password</a>
+                            <a class="dropdown-item" href="{% url 'logout' %}" style="color:white;">Logout</a>
+                    </ul>
+                </div>
+                <a href="{% url 'projects' %}" style="color:white;">Projects</a>
+        {% else %}
+                <a href="{% url 'login' %}" style="color:white;">Login</a>
+        {% endif %}
+        {% if user.is_staff %}
+                <a href="" style="color:white;">Manage Users</a>
+        {% endif %}
+        <a href="{% url 'contact' %}" style="color:white;">Contact us</a>
+        <a href="{% url 'guides' %}" style="color:white;">Guides</a>
+</div>

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block head_title %} Thanks for contact! {{ block.super }} {% endblock head_title %}
+
+{% block content %}
+
+<div class='row'>
+    <div class="col-12 text-center py-5">
+            <h3 class='my-5 py-5'>Thanks!</h3>
+            <p>We appreciate your feedback.<br />
+             Someone from the team will be in touch with you shortly.</p>
+
+            <p><a href="{% url 'home' %}" class="btn btn-lg"> Home </a></p>
+
+      </div>
+</div>
+{% endblock %}

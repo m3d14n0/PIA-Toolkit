@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block head_title %} Home {{ block.super }} {% endblock head_title %}
+{% block content %}
+{% load static %}
+
+        <div class="row" style="margin-top:60px;">
+                <div class='col-md-12 col-12 text-center' >
+                    <img src="{% static 'safewave.png' %}"SafeWave.es>
+                <h4 class="margin">Privacy Impact Assestment Toolkit</h4>
+        </div>
+        </div>
+        <div class="row" style="margin-top:80px;">
+                <div class='col-md-12 col-12 text-center' >
+                        {% if user.is_authenticated %}
+                            <p>Welcome, {{ user.alias|title }}. Thanks for logging in.</p>
+                        {% else %}
+                            <a href="{% url 'login' %}" class="btn btn-success btn-lg">Login</a>
+                        {% endif %}
+                </div>
+        </div>
+        <div class="row">
+            <div class='col-md-12 col-12 text-center' >
+                <p>New to PIA Toolkit?? Check our <a href="{% url 'guides' %}">User Guides</a>!!</p>
+            </div>
+        </div>
+
+{% endblock content %}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+    <html lang=en>
+    <head>
+        <title>{% block head_title %} {{ title|title }} | PIA Manager{% endblock head_title %}</title>
+        {% include 'snippets/css.html' %}
+        {% load static %}
+
+        <link rel="apple-touch-icon" sizes="120x120" href="{% static 'favicon/apple-touch-icon.png' %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+        <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+        <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#da532c">
+        <meta name="theme-color" content="#ffffff">
+    </head>
+        {% include 'snippets/nav.html' %}
+    <body style="background-color:#8EAEBD;">
+        <div class="container-fluido bg-1 text-center">
+            {% block content %} {% endblock content %}
+        </div>
+        {% include 'snippets/css.html' %}
+        {% include 'snippets/js.html' %}
+        {% include 'material/includes/material_css.html' %}
+        {% include 'material/includes/material_js.html' %}
+        <script>
+        $(document).ready(function(){
+          {% block jquery %}{% endblock %}
+        })
+        </script>
+        {% include 'snippets/foot.html' %}
+    </body>
+</html>
+
+
+
