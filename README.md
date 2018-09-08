@@ -14,7 +14,7 @@ And then ```create``` and ```activate``` your virtual environment to install all
 If it's the first time you've heard about virtualenv visit  [virtualenv documentation](https://virtualenv.pypa.io/en/stable/installation/)
 
 Django filetransfers needs to be installed from the ```wkornewald-django-filetransfers-b2df8b4fbf2e``` directory included in the root folder of the project.
-This package comes from * [Django-filetransfers](https://bitbucket.org/wkornewald/django-filetransfers
+This package comes from  [Django-filetransfers](https://bitbucket.org/wkornewald/django-filetransfers)
 Then go into the downloaded folder and install with:
 
 ```
@@ -51,7 +51,9 @@ Bear in mind that the project is using django-admin-honeypot, so the real admin 
 
 ## Deploying
 
-The live version of this project was deployed using ** [AWS elasticbeanstalk](https://aws.amazon.com/es/elasticbeanstalk/) that is why dependencies as boto3 or django-ses were used for. Same with AWS-related environment variables as ```RDS_DB_NAME ```.
+The live version of this project was deployed using [AWS elasticbeanstalk](https://aws.amazon.com/es/elasticbeanstalk/) that is the reason why some dependencies as boto3 or django-ses are included. Same with AWS-related environment variables as ```RDS_DB_NAME ```.
+
+Feel free to grab your own choice of Deployment platform!
 
 ## Authors
 
